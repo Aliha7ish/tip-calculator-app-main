@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c2fc12888c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="input__container">
+        <div class="bill__box">
+          <label class="bill-p">bill</label>
+          <input
+            type="text"
+            name="bill"
+            class="input"
+            id="bill-input"
+            placeholder="0"
+          />
+          <span class="input-icon">$</span>
+        </div>
+        <div class="tip__box">
+          <p class="tip-p">Select top %</p>
+          <div class="tip__nums">
+            <p class="percent__num">5%</p>
+            <p class="percent__num">10%</p>
+            <p class="percent__num">15%</p>
+            <p class="percent__num">25%</p>
+            <p class="percent__num">50%</p>
+            <p class="percent__num custom">custom</p>
+          </div>
+        </div>
+        <div class="people__box">
+          <div class="people__box-text">
+            <p class="num-p">number of people</p>
+            <span class="error-text"></span>
+          </div>
+          <input type="text" class="input" id="people-num" placeholder="0" />
+          <i class="fa-solid fa-user input-icon"></i>
+        </div>
+      </div>
+
+      <div class="output__container">
+        <div class="amount flex-row">
+          <p class="tip__amount-p p-column">
+            Tip amount
+            <span class="tip__person">/ person</span>
+          </p>
+          <p class="tip__amount">$0.00</p>
+        </div>
+        <div class="total flex-row">
+          <p class="tip__total-p p-column">
+            Total
+            <span class="tip__person">/ person</span>
+          </p>
+          <p class="tip__total">$0.00</p>
+        </div>
+        <button class="btn btn-reset">reset</button>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+:root {
+  --font-primary: "Space Mono", sans-serif;
+  --color-white: #ffffff;
+  --color-cyan-dark: #00494d;
+  --strong-cyan: #26c0ab;
+  --color-gray-dark: #5e7a7d;
+  --color-gray-dark-2: #809b9e;
+  --color-gray-light: #f4fafa;
+  --color-gray-light-2: #c5e4e7;
+  --color-orange: #ff5252;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before,
+body {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+body {
+  max-width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  font-family: var(--font-primary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-gray-light-2);
+}
+
+.calculator {
+  background-color: var(--color-white);
+  padding: 4rem;
+  border-radius: 8px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+.output__container {
+  background-color: var(--color-cyan-dark);
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2.5rem;
+  gap: 3rem;
+  border-radius: 3px;
+}
+.flex-row {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+.p-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  color: var(--color-white);
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+.tip__person {
+  font-size: 1.2rem;
+  color: var(--color-gray-dark);
+}
+.tip__total,
+.tip__amount {
+  font-size: 3.8rem;
+  margin-left: auto;
+  color: var(--strong-cyan);
+  font-weight: 700;
+}
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+.btn-reset {
+  margin-top: auto;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1rem 0;
+  background-color: #26c0ab3a;
+
+  color: var(--color-cyan-dark);
+}
+
+.input__container {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  gap: 3rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-gray-dark);
+}
+
+.bill__box,
+.tip__box,
+.people__box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.input {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-cyan-dark);
+  border: 1.5px solid transparent;
+  text-align: right;
+
+  background-color: #f5fafa;
+  border-radius: 3px;
+
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: var(--strong-cyan);
+}
+input::placeholder {
+  color: var(--color-gray-dark-2);
+}
+
+.bill__box,
+.people__box {
+  position: relative;
+}
+.input-icon {
+  position: absolute;
+  color: var(--color-gray-dark-2);
+  font-size: 2.4rem;
+  top: 45%;
+  left: 1.5rem;
+}
+.fa-user {
+  font-size: 1.8rem;
+  top: 53%;
+}
+
+.tip__nums {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 2rem;
+}
+.percent__num {
+  font-size: 2.4rem;
+  background-color: var(--color-cyan-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  border-radius: 3px;
+  color: var(--color-white);
+  user-select: none;
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+.percent__num:hover {
+  background-color: #26c0ab;
+}
+.custom {
+  background-color: #f5fafa;
+  color: var(--color-gray-dark-2);
+}
+
+.people__box-text {
+  display: flex;
+}
+
+.people__box-text :last-child {
+  margin-left: auto;
+}
+.error-text {
+  color: var(--color-orange);
+  font-size: 1.4rem;
+  display: none;
+}
+
+@media only screen and (max-width: 59.375em) {
+  html {
+    font-size: 56.25%;
+  }
+  .tip__total,
+  .tip__amount {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  html {
+    font-size: 50%;
+  }
+  .calculator {
+    padding: 3rem;
+    gap: 3.5rem;
+  }
+}
+@media only screen and (max-width: 40.625em) {
+  .calculator {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
+  .tip__total,
+  .tip__amount {
+    font-size: 3rem;
+  }
+}
